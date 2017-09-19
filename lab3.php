@@ -90,7 +90,7 @@
             
         $person = array(
             "name" => "Abraham", 
-            "profilePicUrl" => "./profile_pics/abraham.png", 
+            "profilePicUrl" => "./profile_pics/pete.png", 
             "cards" => generateHand($deck)
             ); 
                 
