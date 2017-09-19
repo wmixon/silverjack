@@ -89,10 +89,26 @@
         
             
         $person = array(
-            "name" => "Abraham", 
+            "name" => "Pete", 
             "profilePicUrl" => "./profile_pics/pete.png", 
             "cards" => generateHand($deck)
-            ); 
+            );
+        $person2 = array(
+            "name" => "Deron", 
+            "profilePicUrl" => "./profile_pics/deron.png", 
+            "cards" => generateHand($deck)
+            );
+        $person3 = array(
+            "name" => "John", 
+            "profilePicUrl" => "./profile_pics/john.png", 
+            "cards" => generateHand($deck)
+            );
+        $person4 = array(
+            "name" => "Harlen", 
+            "profilePicUrl" => "./profile_pics/harlen.png", 
+            "cards" => generateHand($deck)
+            );
+            
                 
             
             
@@ -112,7 +128,8 @@
                     echo "<img src='".$card["imgURL"]."'>"; 
                 }
                 
-                echo calculateHandValue($person["cards"]); 
+                echo calculateHandValue($person["cards"]);
+                echo "<br><br>";
             }
             
             
@@ -126,7 +143,10 @@
                 return $sum; 
             }
             
-            displayPerson($person); 
+            displayPerson($person);
+            displayPerson($person2);
+            displayPerson($person3);
+            displayPerson($person4);
             
             
         
