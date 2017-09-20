@@ -93,10 +93,31 @@
         
             
         $person = array(
+<<<<<<< HEAD
             "name" => "Ravi", 
             "profilePicUrl" => "./profile_pics/ravi.png", 
+=======
+            "name" => "Pete", 
+            "profilePicUrl" => "./profile_pics/pete.png", 
+>>>>>>> cc6b6e6aca327e041f36d142804532309cdf47d7
             "cards" => generateHand($deck)
-            ); 
+            );
+        $person2 = array(
+            "name" => "Deron", 
+            "profilePicUrl" => "./profile_pics/deron.png", 
+            "cards" => generateHand($deck)
+            );
+        $person3 = array(
+            "name" => "John", 
+            "profilePicUrl" => "./profile_pics/john.png", 
+            "cards" => generateHand($deck)
+            );
+        $person4 = array(
+            "name" => "Harlen", 
+            "profilePicUrl" => "./profile_pics/harlen.png", 
+            "cards" => generateHand($deck)
+            );
+            
                 
          $person1 = array(
             "name" => "pete", 
@@ -132,7 +153,8 @@
                     echo "<img src='".$card["imgURL"]."'>"; 
                 }
                 
-                echo calculateHandValue($person["cards"]); 
+                echo calculateHandValue($person["cards"]);
+                echo "<br><br>";
             }
             
             
@@ -204,6 +226,7 @@
                 return $sum; 
             }
             
+<<<<<<< HEAD
             displayPerson($person); 
             echo "<br>";
             displayPerson1($person1); 
@@ -234,6 +257,13 @@
                 }
                 echo "<br>";
                 echo "<h2>Winner is . $winner</h2>";
+=======
+            displayPerson($person);
+            displayPerson($person2);
+            displayPerson($person3);
+            displayPerson($person4);
+            
+>>>>>>> cc6b6e6aca327e041f36d142804532309cdf47d7
             
         
         ?>
