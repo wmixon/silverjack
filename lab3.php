@@ -70,7 +70,7 @@
         function generateHand($deck) {
             $hand = array(); 
             
-            for ($i = 0; $i < 3; $i++) {
+            for ($i = 0; $i < 4; $i++) {
                 $cardNum = array_pop($deck);
                 $card = mapNumberToCard($cardNum); 
                 array_push($hand, $card); 
@@ -79,7 +79,11 @@
             return $hand; 
         }
         
-        $deck = generateDeck(); 
+       
+        $deck = generateDeck();
+        $deck1 = generateDeck();
+         $deck2 = generateDeck();
+          $deck3 = generateDeck();
         //printDeck($deck); 
         
         
@@ -89,16 +93,32 @@
         
             
         $person = array(
-            "name" => "Abraham", 
-            "profilePicUrl" => "./profile_pics/pete.png", 
+            "name" => "Ravi", 
+            "profilePicUrl" => "./profile_pics/ravi.png", 
             "cards" => generateHand($deck)
             ); 
                 
+         $person1 = array(
+            "name" => "pete", 
+            "profilePicUrl" => "./profile_pics/pete.png", 
+            "cards" => generateHand($deck1)
+            );       
+           
+         $person2 = array(
+            "name" => "John", 
+            "profilePicUrl" => "./profile_pics/john.png", 
+            "cards" => generateHand($deck2)
+            );  
             
+        $person3 = array(
+            "name" => "harlen", 
+            "profilePicUrl" => "./profile_pics/harlen.png", 
+            "cards" => generateHand($deck3)
+            ); 
             
             function displayPerson($person) {
                 // show profile pic
-                echo "<img src='".$person["profilePicUrl"]."'>"; 
+                echo "<img src='".$person["profilePicUrl"]."'width: 30%>"; 
                 
                 
                 // iterate through $person's "cards"
@@ -116,6 +136,64 @@
             }
             
             
+            function displayPerson1($person1) {
+                // show profile pic
+                echo "<img src='".$person1["profilePicUrl"]."'width: 30%>"; 
+                
+                
+                // iterate through $person's "cards"
+                
+                for($i = 0; $i < count($person1["cards"]); $i++) {
+                    $card = $person1["cards"][$i];
+                    
+                    // construct the imgURL for each card
+                    
+                    // translate this to HTML 
+                    echo "<img src='".$card["imgURL"]."'>"; 
+                }
+                
+                echo calculateHandValue($person1["cards"]); 
+            }
+            
+            function displayPerson2($person2) {
+                // show profile pic
+                echo "<img src='".$person2["profilePicUrl"]."'width: 30%>"; 
+                
+                
+                // iterate through $person's "cards"
+                
+                for($i = 0; $i < count($person2["cards"]); $i++) {
+                    $card = $person2["cards"][$i];
+                    
+                    // construct the imgURL for each card
+                    
+                    // translate this to HTML 
+                    echo "<img src='".$card["imgURL"]."'>"; 
+                }
+                
+                echo calculateHandValue($person2["cards"]); 
+            }
+            
+            function displayPerson3($person3) {
+                // show profile pic
+                echo "<img src='".$person3["profilePicUrl"]."'width: 30%>"; 
+                
+                
+                // iterate through $person's "cards"
+                
+                for($i = 0; $i < count($person3["cards"]); $i++) {
+                    $card = $person3["cards"][$i];
+                    
+                    // construct the imgURL for each card
+                    
+                    // translate this to HTML 
+                    echo "<img src='".$card["imgURL"]."'>"; 
+                }
+                
+                echo calculateHandValue($person3["cards"]); 
+            }
+            
+            
             function calculateHandValue($cards) {
                 $sum = 0; 
                 
@@ -127,7 +205,35 @@
             }
             
             displayPerson($person); 
-            
+            echo "<br>";
+            displayPerson1($person1); 
+            echo "<br>";
+            displayPerson2($person2); 
+            echo "<br>";
+            displayPerson3($person3); 
+                    
+           
+           
+           
+           
+           
+                $winner =calculateHandValue($person["cards"]);
+                $perso1 = calculateHandValue($person1["cards"]);
+                $perso2 = calculateHandValue($person2["cards"]);
+                $perso3 = calculateHandValue($person3["cards"]);
+              
+
+                for($ii=1;$ii<4;$ii++){ 
+                    echo "$perso.[$ii]";
+                    
+                    if ($winner<$perso[ii])
+                    {
+                        $winner = $perso[$ii];
+                         echo "<h2>Winner is . $winner</h2>";
+                    }
+                }
+                echo "<br>";
+                echo "<h2>Winner is . $winner</h2>";
             
         
         ?>
