@@ -90,7 +90,7 @@
         
         function displayPerson($person) {
             // show profile pic
-            echo "<img src='".$person["profilePicUrl"]."'width: 30%>"; 
+            echo "<h2><img src='".$person["profilePicUrl"]."'width: 30%>"; 
             
             
             // iterate through $person's "cards"
@@ -101,11 +101,11 @@
                 // construct the imgURL for each card
                 
                 // translate this to HTML 
-                echo "<img src='".$card["imgURL"]."'>"; 
+                echo "<img src='".$card["imgURL"]."'> "; 
             }
             
             echo calculateHandValue($person["cards"]);
-            echo "<br><br>";
+            echo "</h2>";
         }
         
         function calculateHandValue($cards) {
@@ -154,25 +154,28 @@
             "cards" => generateHand($deck)
             );
         $person1 = array(
-            "name" => "Pete", 
-            "profilePicUrl" => "./profile_pics/pete.png", 
+            "name" => "Westley", 
+            "profilePicUrl" => "./profile_pics/westley.png", 
             "cards" => generateHand($deck)
             );
         $person2 = array(
-            "name" => "John", 
-            "profilePicUrl" => "./profile_pics/john.png", 
+            "name" => "Shaikh", 
+            "profilePicUrl" => "./profile_pics/shaikh.png", 
             "cards" => generateHand($deck)
             );  
         $person3 = array(
-            "name" => "Harlen", 
-            "profilePicUrl" => "./profile_pics/harlen.png", 
+            "name" => "Gabe", 
+            "profilePicUrl" => "./profile_pics/gabe.png", 
             "cards" => generateHand($deck)
             ); 
-            
-        displayPerson($person0);
-        displayPerson($person1);
-        displayPerson($person2);
-        displayPerson($person3);
+        
+        $randomDisplay = array(0,1,2,3);
+        shuffle($randomDisplay);
+        
+        displayPerson(${'person'.$randomDisplay[0]});
+        displayPerson(${'person'.$randomDisplay[1]});
+        displayPerson(${'person'.$randomDisplay[2]});
+        displayPerson(${'person'.$randomDisplay[3]});
         
         winner();
             

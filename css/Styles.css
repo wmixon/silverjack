@@ -31,6 +31,14 @@ h1 {
     text-shadow:  4px 2px #474747; 
 }
 
+h2 {
+    border-radius: 20px; 
+    color: #FFFFFF;
+    text-align: center; 
+    font-size:  30px; 
+    text-shadow:  4px 2px #474747; 
+}
+
 #footer {
     text-align: center;
     height: 15px; 
