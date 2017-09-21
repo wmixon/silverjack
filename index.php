@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Lab 3: Silverjack</title>
-        <link rel="stylesheet" href="../silverjack/css/Styles.css" type="text/css" /> 
+        <link rel="stylesheet" href="/silverjack/css/Styles.css" type="text/css" /> 
     </head>
     <body>
         <main>
