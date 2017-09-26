@@ -13,7 +13,10 @@
                 
             </div>
             <div>
-        <?php 
+        <?php
+        
+        $starttime = microtime(true);
+        
         // Generate a deck of cards 
         // [0, 1, 2, ..., 51]
         // map each number to a card 
@@ -154,7 +157,11 @@
         displayPerson(${'person'.$randomDisplay[3]});
         // Shows winner
         winner();
-            
+        
+        $endtime = microtime(true);
+        $timediff = $endtime - $starttime;
+        
+        echo $timediff;
         ?>
     </div>    
         </main>
@@ -162,7 +169,7 @@
         <br>
         <br>
         <form>
-            <center><button type="submit" onclick="<?php displayPerson() ?>" name="displayresult" id="button">Play Again</button></center>
+            <center><button type="submit" name="displayresult" id="button">Play Again</button></center>
         </form>
         <br>
         <br>
